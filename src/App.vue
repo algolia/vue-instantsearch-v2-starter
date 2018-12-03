@@ -1,9 +1,7 @@
 <template>
   <div>
     <header class="header">
-      <h1 class="header-title">
-        <a href="/">Vue InstantSearch v2 starter</a>
-      </h1>
+      <h1 class="header-title"><a href="/">Vue InstantSearch v2 starter</a></h1>
       <p class="header-subtitle">
         using
         <a href="https://github.com/algolia/vue-instantsearch">
@@ -19,40 +17,19 @@
       >
         <div class="search-panel">
           <div class="search-panel__filters">
-            <ais-refinement-list
-              attribute="categories"
-              searchable
-            />
+            <ais-refinement-list attribute="categories" searchable />
           </div>
 
           <div class="search-panel__results">
-            <ais-search-box
-              placeholder="Search here…"
-              class="searchbox"
-            />
+            <ais-search-box placeholder="Search here…" class="searchbox" />
             <ais-hits>
-              <template
-                slot="item"
-                slot-scope="{ item }"
-              >
-                <h1>
-                  <ais-highlight
-                    :hit="item"
-                    attribute="name"
-                  />
-                </h1>
-                <p>
-                  <ais-highlight
-                    :hit="item"
-                    attribute="description"
-                  />
-                </p>
+              <template slot="item" slot-scope="{ item }">
+                <h1><ais-highlight :hit="item" attribute="name" /></h1>
+                <p><ais-highlight :hit="item" attribute="description" /></p>
               </template>
             </ais-hits>
 
-            <div class="pagination">
-              <ais-pagination />
-            </div>
+            <div class="pagination"><ais-pagination /></div>
           </div>
         </div>
       </ais-instant-search>
