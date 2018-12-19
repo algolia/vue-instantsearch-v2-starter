@@ -13,7 +13,7 @@
     <div class="container">
       <ais-instant-search
         :search-client="searchClient"
-        index-name="instant_search"
+        index-name="demo_ecommerce"
       >
         <div class="search-panel">
           <div class="search-panel__filters">
@@ -45,8 +45,8 @@ export default {
   data() {
     return {
       searchClient: algoliasearch(
-        'latency',
-        '6be0576ff61c053d5f9a3225e2a90f76'
+        'B1G2GM9NG0',
+        'aadef574be1f9252bb48d4ea09b5cfe5'
       ),
     };
   },
@@ -63,11 +63,6 @@ h1 {
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
-.ais-Highlight-highlighted {
-  background: cyan;
-  font-style: normal;
 }
 
 .header {
